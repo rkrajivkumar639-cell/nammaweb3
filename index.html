@@ -81,20 +81,28 @@
   <header class="sticky top-0 z-40 bg-brandDark/95 backdrop-blur-md border-b border-brandTeal/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- EXACT LOGO NEAR NAMMAWEB (PURE VECTOR GEOMETRY) -->
+      <!-- EXACT LOGO NEAR NAMMAWEB -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
         <div class="logo-container w-12 h-12 p-1.5 transition-transform group-hover:scale-105">
-          <svg viewBox="0 0 1000 1000" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Interlocking Outer Loop Path -->
-            <path d="M 320 200 L 470 350 L 320 500 L 170 350 Z" />
-            <path d="M 680 200 L 830 350 L 680 500 L 530 350 Z" />
-            <path d="M 320 560 L 470 710 L 320 860 L 170 710 Z" />
-            <path d="M 680 560 L 830 710 L 680 860 L 530 710 Z" />
-            <!-- Continuous Diagonal Ribbon Straps -->
-            <line x1="470" y1="350" x2="680" y2="560" stroke="#ffffff" stroke-width="70" stroke-linecap="square" />
-            <line x1="470" y1="350" x2="680" y2="560" stroke="#005d68" stroke-width="48" />
-            <line x1="320" y1="500" x2="530" y2="710" stroke="#ffffff" stroke-width="70" stroke-linecap="square" />
-            <line x1="320" y1="500" x2="530" y2="710" stroke="#005d68" stroke-width="48" />
+          <svg viewBox="0 0 500 500" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Interlocking Outer Diamond 1 -->
+            <polygon points="160,95 285,220 160,345 35,220" />
+            <!-- Interlocking Outer Diamond 2 -->
+            <polygon points="340,95 465,220 340,345 215,220" />
+            <!-- Lower Left Outer Diamond -->
+            <polygon points="160,250 285,375 160,500 35,375" />
+            <!-- Lower Right Outer Diamond -->
+            <polygon points="340,250 465,375 340,500 215,375" />
+            
+            <!-- Exact Central Diagonal Cross Overlays -->
+            <polyline points="285,95 435,245 285,395" stroke="#005d68" stroke-width="26" />
+            <polyline points="65,255 215,405 65,555" stroke="#005d68" stroke-width="26" />
+            
+            <!-- Intersecting Cutout Bridges for True 3D Over-Under Weave -->
+            <line x1="215" y1="220" x2="340" y2="345" stroke="#ffffff" stroke-width="40" stroke-linecap="square" />
+            <line x1="215" y1="220" x2="340" y2="345" stroke="#005d68" stroke-width="26" stroke-linecap="round" />
+            <line x1="160" y1="250" x2="285" y2="375" stroke="#ffffff" stroke-width="40" stroke-linecap="square" />
+            <line x1="160" y1="250" x2="285" y2="375" stroke="#005d68" stroke-width="26" stroke-linecap="round" />
           </svg>
         </div>
         <div class="flex flex-col">
@@ -384,25 +392,26 @@
   <footer class="bg-brandDark border-t border-brandTeal py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
       
-      <!-- EXACT LOGO ABOVE NAMMAWEB (PURE VECTOR GEOMETRY) -->
+      <!-- EXACT LOGO ABOVE NAMMAWEB -->
       <div class="logo-container w-16 h-16 p-2 mb-3">
-        <svg viewBox="0 0 1000 1000" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 320 200 L 470 350 L 320 500 L 170 350 Z" />
-          <path d="M 680 200 L 830 350 L 680 500 L 530 350 Z" />
-          <path d="M 320 560 L 470 710 L 320 860 L 170 710 Z" />
-          <path d="M 680 560 L 830 710 L 680 860 L 530 710 Z" />
-          <line x1="470" y1="350" x2="680" y2="560" stroke="#ffffff" stroke-width="70" stroke-linecap="square" />
-          <line x1="470" y1="350" x2="680" y2="560" stroke="#005d68" stroke-width="48" />
-          <line x1="320" y1="500" x2="530" y2="710" stroke="#ffffff" stroke-width="70" stroke-linecap="square" />
-          <line x1="320" y1="500" x2="530" y2="710" stroke="#005d68" stroke-width="48" />
+        <svg viewBox="0 0 500 500" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="160,95 285,220 160,345 35,220" />
+          <polygon points="340,95 465,220 340,345 215,220" />
+          <polygon points="160,250 285,375 160,500 35,375" />
+          <polygon points="340,250 465,375 340,500 215,375" />
+          <polyline points="285,95 435,245 285,395" stroke="#005d68" stroke-width="26" />
+          <polyline points="65,255 215,405 65,555" stroke="#005d68" stroke-width="26" />
+          <line x1="215" y1="220" x2="340" y2="345" stroke="#ffffff" stroke-width="40" stroke-linecap="square" />
+          <line x1="215" y1="220" x2="340" y2="345" stroke="#005d68" stroke-width="26" stroke-linecap="round" />
+          <line x1="160" y1="250" x2="285" y2="375" stroke="#ffffff" stroke-width="40" stroke-linecap="square" />
+          <line x1="160" y1="250" x2="285" y2="375" stroke="#005d68" stroke-width="26" stroke-linecap="round" />
         </svg>
       </div>
       
       <span class="font-cinzel text-2xl font-bold text-white tracking-widest block">nammaweb</span>
       <span class="text-xs uppercase font-semibold tracking-widest text-slate-400">ai learning suite</span>
       
-      <!-- MENTION UNDER THIS LOGO AS infonammaweb.com -->
-      <a href="mailto:infonammaweb@gmail.com" class="mt-3 text-sm font-medium tracking-wider text-luxuryGold hover:text-white underline">
+      <a href="mailto:info@nammaweb.com" class="mt-3 text-sm font-medium tracking-wider text-luxuryGold hover:text-white underline">
         infonammaweb.com
       </a>
 
