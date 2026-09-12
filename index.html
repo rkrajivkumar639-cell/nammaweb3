@@ -65,13 +65,14 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      padding: 5px;
+      padding: 4px;
       overflow: hidden;
       flex-shrink: 0;
     }
-    .logo-render-svg {
+    .logo-render-img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
       display: block;
     }
   </style>
@@ -88,31 +89,23 @@
   <header class="sticky top-0 z-40 bg-brandDark/95 backdrop-blur-md border-b border-brandTeal/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- EXACT LOGO NEAR NAMMAWEB -->
+      <!-- EXACT LOGO NEAR NAMMAWEB (DIRECT BASE64 EMBEDDED) -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
         <div class="brand-logo-frame w-12 h-12 transition-transform group-hover:scale-105">
-          <!-- EXACT GEOMETRIC VECTOR: 2 TILED INTERLOCKING DIAMONDS WITH ACCURATE CUTS & DIAGONAL OVERLAP -->
-          <svg viewBox="0 0 1000 1000" class="logo-render-svg site-logo-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#005d68" stroke-width="50" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Upper-left outer loop corner -->
-              <path d="M 319 198 L 473 346" />
-              <path d="M 319 198 L 62 437 L 319 694" />
-              <!-- Bottom-right outer loop corner -->
-              <path d="M 681 802 L 533 672" />
-              <path d="M 681 802 L 938 563 L 681 306" />
-              <!-- Upper-right diamond tip -->
-              <path d="M 681 198 L 933 448 L 754 624" />
-              <path d="M 681 198 L 429 448" />
-              <!-- Bottom-left diamond tip -->
-              <path d="M 319 802 L 67 552 L 246 376" />
-              <path d="M 319 802 L 571 552" />
-              <!-- Main continuous diagonal crossbar -->
-              <path d="M 252 617 L 754 381" stroke-width="52" />
-              <path d="M 327 687 L 754 486" stroke-width="50" />
-              <!-- Inner windows / alignment boundaries -->
-              <path d="M 319 328 L 422 429 L 246 601 L 143 500 Z" />
-              <path d="M 681 672 L 578 571 L 754 399 L 857 500 Z" />
-            </g>
+          <svg class="logo-render-img" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Exact 1:1 Scaled Geometry matching the brand mark -->
+            <path d="M318 198 L475 348" stroke="#005d68" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M318 198 L64 438 L318 692 L572 438 L318 198 Z" stroke="#005d68" stroke-width="52" stroke-linejoin="round" />
+            <path d="M682 802 L525 652" stroke="#005d68" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M682 802 L936 562 L682 308 L428 562 L682 802 Z" stroke="#005d68" stroke-width="52" stroke-linejoin="round" />
+            <!-- Intersecting Central Diagonals with Over-and-Under Occlusion -->
+            <path d="M250 622 L750 378" stroke="#ffffff" stroke-width="70" stroke-linecap="butt" />
+            <path d="M250 622 L750 378" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
+            <path d="M324 694 L754 484" stroke="#ffffff" stroke-width="70" stroke-linecap="butt" />
+            <path d="M324 694 L754 484" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
+            <!-- Open Gap Cutaways -->
+            <path d="M470 344 L682 198" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
+            <path d="M530 656 L318 802" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
           </svg>
         </div>
         <div class="flex flex-col">
@@ -404,21 +397,17 @@
       
       <!-- LOGO ABOVE NAMMAWEB IN FOOTER -->
       <div class="brand-logo-frame w-16 h-16 mb-3 p-2">
-        <svg viewBox="0 0 1000 1000" class="logo-render-svg site-logo-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g stroke="#005d68" stroke-width="50" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M 319 198 L 473 346" />
-            <path d="M 319 198 L 62 437 L 319 694" />
-            <path d="M 681 802 L 533 672" />
-            <path d="M 681 802 L 938 563 L 681 306" />
-            <path d="M 681 198 L 933 448 L 754 624" />
-            <path d="M 681 198 L 429 448" />
-            <path d="M 319 802 L 67 552 L 246 376" />
-            <path d="M 319 802 L 571 552" />
-            <path d="M 252 617 L 754 381" stroke-width="52" />
-            <path d="M 327 687 L 754 486" stroke-width="50" />
-            <path d="M 319 328 L 422 429 L 246 601 L 143 500 Z" />
-            <path d="M 681 672 L 578 571 L 754 399 L 857 500 Z" />
-          </g>
+        <svg class="logo-render-img" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M318 198 L475 348" stroke="#005d68" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M318 198 L64 438 L318 692 L572 438 L318 198 Z" stroke="#005d68" stroke-width="52" stroke-linejoin="round" />
+          <path d="M682 802 L525 652" stroke="#005d68" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M682 802 L936 562 L682 308 L428 562 L682 802 Z" stroke="#005d68" stroke-width="52" stroke-linejoin="round" />
+          <path d="M250 622 L750 378" stroke="#ffffff" stroke-width="70" stroke-linecap="butt" />
+          <path d="M250 622 L750 378" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
+          <path d="M324 694 L754 484" stroke="#ffffff" stroke-width="70" stroke-linecap="butt" />
+          <path d="M324 694 L754 484" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
+          <path d="M470 344 L682 198" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
+          <path d="M530 656 L318 802" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
         </svg>
       </div>
       
@@ -429,14 +418,6 @@
       <a href="mailto:info@nammaweb.com" class="mt-3 text-sm font-medium tracking-wider text-luxuryGold hover:text-white underline">
         info@nammaweb.com
       </a>
-
-      <!-- OPTIONAL DEVELOPER LOGO OVERRIDE (CLICK TO LOAD RAW PNG FROM COMPUTER) -->
-      <div class="mt-4">
-        <label for="local-logo-uploader" class="text-[10px] text-slate-500 hover:text-slate-300 underline cursor-pointer">
-          [ Optional: Click to load custom logo.png from device ]
-        </label>
-        <input type="file" id="local-logo-uploader" accept="image/*" class="hidden" onchange="loadLocalLogo(event)">
-      </div>
 
       <div class="mt-8 pt-8 border-t border-brandTeal/60 w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
         <div>© 2026 NammaWeb AI Learning Suite. All rights reserved.</div>
@@ -477,7 +458,6 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // Tab switching logic
     function showTab(tab) {
       const suite = document.getElementById('view-suite');
       const blog = document.getElementById('view-blog');
@@ -499,44 +479,14 @@
       }
     }
 
-    // Direct WhatsApp booking logic
     function bookPlan(plan, price) {
       const msg = `Hello NammaWeb AI Team, I would like to book the ${plan} priced at ${price}. Please send payment and activation details.`;
       window.open(`https://wa.me/917676546577?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
-    // Popup dismissal
     function dismissPopup() {
       document.getElementById('whatsapp-popup').classList.add('translate-y-40', 'opacity-0');
     }
-
-    // Optional: Instant custom logo loader if you want to preview your raw PNG file locally
-    function loadLocalLogo(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const imgUrl = e.target.result;
-          localStorage.setItem('nammaweb_custom_logo', imgUrl);
-          applySavedLogo(imgUrl);
-        };
-        reader.readAsDataURL(file);
-      }
-    }
-
-    function applySavedLogo(url) {
-      document.querySelectorAll('.brand-logo-frame').forEach(frame => {
-        frame.innerHTML = `<img src="${url}" class="w-full h-full object-contain" alt="NammaWeb Official Logo" />`;
-      });
-    }
-
-    // Check if a custom uploaded logo was stored
-    window.addEventListener('DOMContentLoaded', () => {
-      const saved = localStorage.getItem('nammaweb_custom_logo');
-      if (saved) {
-        applySavedLogo(saved);
-      }
-    });
   </script>
 </body>
 </html>
