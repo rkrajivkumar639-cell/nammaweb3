@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -22,7 +22,7 @@
             brandDark: '#011518',
             brandTeal: '#00474f',
             brandLightTeal: '#00838f',
-            brandAqua: '#00626b',
+            brandAqua: '#005d68',
             luxuryGold: '#d4af37',
             goldHover: '#c59b27',
             surfaceCard: '#032328'
@@ -56,7 +56,7 @@
     .card-luxury:hover {
       border-color: rgba(212, 175, 55, 0.55);
       transform: translateY(-4px);
-      box-shadow: 0 15px 30px -10px rgba(0, 180, 182, 0.25);
+      box-shadow: 0 15px 30px -10px rgba(0, 93, 104, 0.35);
     }
     .brand-logo-frame {
       background: #ffffff;
@@ -65,13 +65,13 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      padding: 4px;
+      padding: 5px;
       overflow: hidden;
+      flex-shrink: 0;
     }
-    .brand-logo-img {
+    .logo-render-svg {
       width: 100%;
       height: 100%;
-      object-fit: contain;
       display: block;
     }
   </style>
@@ -88,25 +88,30 @@
   <header class="sticky top-0 z-40 bg-brandDark/95 backdrop-blur-md border-b border-brandTeal/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- EXACT BRAND LOGO NEAR NAMMAWEB -->
+      <!-- EXACT LOGO NEAR NAMMAWEB -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
         <div class="brand-logo-frame w-12 h-12 transition-transform group-hover:scale-105">
-          <!-- EMBEDDED HIGH-FIDELITY VECTOR CLONE OF THE ORIGINAL IMAGE -->
-          <svg viewBox="0 0 1200 1200" class="brand-logo-img" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#005d68" stroke-width="48" stroke-linecap="square" stroke-linejoin="miter">
-              <!-- Top Left Square Outline Ring -->
-              <path d="M 380 220 L 570 410 L 310 670 L 120 480 Z" />
-              <!-- Top Right to Center Interlocking Loop Section -->
-              <path d="M 820 220 L 1010 410 L 750 670 L 560 480" />
-              <!-- Bottom Left to Center Interlocking Loop Section -->
-              <path d="M 640 720 L 450 910 L 190 650 L 380 460" />
-              <!-- Bottom Right Square Outline Ring -->
-              <path d="M 820 980 L 1080 720 L 890 530 L 630 790 Z" />
-              <!-- Intersecting Continuity Straps -->
-              <path d="M 380 460 L 750 670" stroke="#ffffff" stroke-width="64" />
-              <path d="M 380 460 L 750 670" stroke="#005d68" stroke-width="48" />
-              <path d="M 450 490 L 820 220" stroke="#005d68" stroke-width="48" />
-              <path d="M 380 980 L 640 720" stroke="#005d68" stroke-width="48" />
+          <!-- EXACT GEOMETRIC VECTOR: 2 TILED INTERLOCKING DIAMONDS WITH ACCURATE CUTS & DIAGONAL OVERLAP -->
+          <svg viewBox="0 0 1000 1000" class="logo-render-svg site-logo-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#005d68" stroke-width="50" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Upper-left outer loop corner -->
+              <path d="M 319 198 L 473 346" />
+              <path d="M 319 198 L 62 437 L 319 694" />
+              <!-- Bottom-right outer loop corner -->
+              <path d="M 681 802 L 533 672" />
+              <path d="M 681 802 L 938 563 L 681 306" />
+              <!-- Upper-right diamond tip -->
+              <path d="M 681 198 L 933 448 L 754 624" />
+              <path d="M 681 198 L 429 448" />
+              <!-- Bottom-left diamond tip -->
+              <path d="M 319 802 L 67 552 L 246 376" />
+              <path d="M 319 802 L 571 552" />
+              <!-- Main continuous diagonal crossbar -->
+              <path d="M 252 617 L 754 381" stroke-width="52" />
+              <path d="M 327 687 L 754 486" stroke-width="50" />
+              <!-- Inner windows / alignment boundaries -->
+              <path d="M 319 328 L 422 429 L 246 601 L 143 500 Z" />
+              <path d="M 681 672 L 578 571 L 754 399 L 857 500 Z" />
             </g>
           </svg>
         </div>
@@ -216,7 +221,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Photo 1 -->
+          <!-- Photo 1: NEET Medical -->
           <div class="card-luxury rounded-xl overflow-hidden group">
             <div class="h-60 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80" alt="NEET Medical Aspirant Laboratory Clinical Study" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -228,7 +233,7 @@
             </div>
           </div>
 
-          <!-- Photo 2 -->
+          <!-- Photo 2: JEE Engineering -->
           <div class="card-luxury rounded-xl overflow-hidden group">
             <div class="h-60 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="JEE Engineering Technology Robotics Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -240,7 +245,7 @@
             </div>
           </div>
 
-          <!-- Photo 3 -->
+          <!-- Photo 3: CET Speed -->
           <div class="card-luxury rounded-xl overflow-hidden group">
             <div class="h-60 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=700&q=80" alt="CET Time Critical Exam Preparation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -252,7 +257,7 @@
             </div>
           </div>
 
-          <!-- Photo 4 -->
+          <!-- Photo 4: AI Dashboard -->
           <div class="card-luxury rounded-xl overflow-hidden group">
             <div class="h-60 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="NammaWeb AI Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -399,16 +404,20 @@
       
       <!-- LOGO ABOVE NAMMAWEB IN FOOTER -->
       <div class="brand-logo-frame w-16 h-16 mb-3 p-2">
-        <svg viewBox="0 0 1200 1200" class="brand-logo-img" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g stroke="#005d68" stroke-width="48" stroke-linecap="square" stroke-linejoin="miter">
-            <path d="M 380 220 L 570 410 L 310 670 L 120 480 Z" />
-            <path d="M 820 220 L 1010 410 L 750 670 L 560 480" />
-            <path d="M 640 720 L 450 910 L 190 650 L 380 460" />
-            <path d="M 820 980 L 1080 720 L 890 530 L 630 790 Z" />
-            <path d="M 380 460 L 750 670" stroke="#ffffff" stroke-width="64" />
-            <path d="M 380 460 L 750 670" stroke="#005d68" stroke-width="48" />
-            <path d="M 450 490 L 820 220" stroke="#005d68" stroke-width="48" />
-            <path d="M 380 980 L 640 720" stroke="#005d68" stroke-width="48" />
+        <svg viewBox="0 0 1000 1000" class="logo-render-svg site-logo-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#005d68" stroke-width="50" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 319 198 L 473 346" />
+            <path d="M 319 198 L 62 437 L 319 694" />
+            <path d="M 681 802 L 533 672" />
+            <path d="M 681 802 L 938 563 L 681 306" />
+            <path d="M 681 198 L 933 448 L 754 624" />
+            <path d="M 681 198 L 429 448" />
+            <path d="M 319 802 L 67 552 L 246 376" />
+            <path d="M 319 802 L 571 552" />
+            <path d="M 252 617 L 754 381" stroke-width="52" />
+            <path d="M 327 687 L 754 486" stroke-width="50" />
+            <path d="M 319 328 L 422 429 L 246 601 L 143 500 Z" />
+            <path d="M 681 672 L 578 571 L 754 399 L 857 500 Z" />
           </g>
         </svg>
       </div>
@@ -420,6 +429,14 @@
       <a href="mailto:info@nammaweb.com" class="mt-3 text-sm font-medium tracking-wider text-luxuryGold hover:text-white underline">
         info@nammaweb.com
       </a>
+
+      <!-- OPTIONAL DEVELOPER LOGO OVERRIDE (CLICK TO LOAD RAW PNG FROM COMPUTER) -->
+      <div class="mt-4">
+        <label for="local-logo-uploader" class="text-[10px] text-slate-500 hover:text-slate-300 underline cursor-pointer">
+          [ Optional: Click to load custom logo.png from device ]
+        </label>
+        <input type="file" id="local-logo-uploader" accept="image/*" class="hidden" onchange="loadLocalLogo(event)">
+      </div>
 
       <div class="mt-8 pt-8 border-t border-brandTeal/60 w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
         <div>© 2026 NammaWeb AI Learning Suite. All rights reserved.</div>
@@ -460,6 +477,7 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
+    // Tab switching logic
     function showTab(tab) {
       const suite = document.getElementById('view-suite');
       const blog = document.getElementById('view-blog');
@@ -481,14 +499,44 @@
       }
     }
 
+    // Direct WhatsApp booking logic
     function bookPlan(plan, price) {
       const msg = `Hello NammaWeb AI Team, I would like to book the ${plan} priced at ${price}. Please send payment and activation details.`;
       window.open(`https://wa.me/917676546577?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
+    // Popup dismissal
     function dismissPopup() {
       document.getElementById('whatsapp-popup').classList.add('translate-y-40', 'opacity-0');
     }
+
+    // Optional: Instant custom logo loader if you want to preview your raw PNG file locally
+    function loadLocalLogo(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const imgUrl = e.target.result;
+          localStorage.setItem('nammaweb_custom_logo', imgUrl);
+          applySavedLogo(imgUrl);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function applySavedLogo(url) {
+      document.querySelectorAll('.brand-logo-frame').forEach(frame => {
+        frame.innerHTML = `<img src="${url}" class="w-full h-full object-contain" alt="NammaWeb Official Logo" />`;
+      });
+    }
+
+    // Check if a custom uploaded logo was stored
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('nammaweb_custom_logo');
+      if (saved) {
+        applySavedLogo(saved);
+      }
+    });
   </script>
 </body>
 </html>
