@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -22,7 +22,7 @@
             brandDark: '#011518',
             brandTeal: '#00474f',
             brandLightTeal: '#00838f',
-            brandAqua: '#005d68',
+            brandAqua: '#00626b',
             luxuryGold: '#d4af37',
             goldHover: '#c59b27',
             surfaceCard: '#032328'
@@ -56,23 +56,15 @@
     .card-luxury:hover {
       border-color: rgba(212, 175, 55, 0.55);
       transform: translateY(-4px);
-      box-shadow: 0 15px 30px -10px rgba(0, 93, 104, 0.35);
+      box-shadow: 0 15px 30px -10px rgba(0, 180, 182, 0.25);
     }
-    .brand-logo-frame {
+    .logo-container {
       background: #ffffff;
-      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      padding: 6px;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    .logo-render-svg {
-      width: 100%;
-      height: 100%;
-      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
   </style>
 </head>
@@ -88,14 +80,22 @@
   <header class="sticky top-0 z-40 bg-brandDark/95 backdrop-blur-md border-b border-brandTeal/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- LOGO NEAR NAMMAWEB -->
+      <!-- EXACT LOGO NEAR NAMMAWEB (PURE VECTOR EMBEDDED) -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
-        <div class="brand-logo-frame w-12 h-12 transition-transform group-hover:scale-105">
-          <svg viewBox="0 0 500 500" fill="none" stroke="#005d68" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" class="logo-render-svg">
-            <!-- Interlocking continuous path 1 -->
-            <path d="M 160 100 L 235 175 L 360 50 L 465 155 L 340 280 L 265 205 L 140 330 L 235 425 L 360 300" />
-            <!-- Interlocking continuous path 2 -->
-            <path d="M 340 400 L 265 325 L 140 450 L 35 345 L 160 220 L 235 295 L 360 170 L 265 75 L 140 200" />
+        <div class="logo-container w-12 h-12 p-1.5 transition-transform group-hover:scale-105">
+          <!-- Exact geometric interlocking square loop logo -->
+          <svg viewBox="0 0 500 500" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="26" stroke-linejoin="miter" stroke-miterlimit="10">
+            <!-- Top Right Diamond Loop -->
+            <polygon points="340,90 455,205 340,320 225,205" />
+            <polygon points="340,150 395,205 340,260 285,205" />
+            <!-- Bottom Left Diamond Loop -->
+            <polygon points="160,180 275,295 160,410 45,295" />
+            <polygon points="160,240 215,295 160,350 105,295" />
+            <!-- Interlocking Connector Straps -->
+            <line x1="225" y1="205" x2="340" y2="320" stroke="#ffffff" stroke-width="30" />
+            <line x1="225" y1="205" x2="340" y2="320" stroke="#005d68" stroke-width="26" />
+            <line x1="160" y1="180" x2="275" y2="295" stroke="#ffffff" stroke-width="30" />
+            <line x1="160" y1="180" x2="275" y2="295" stroke="#005d68" stroke-width="26" />
           </svg>
         </div>
         <div class="flex flex-col">
@@ -112,9 +112,9 @@
         <button id="nav-tab-blog" onclick="showTab('blog')" class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition">
           SEO Knowledge Hub
         </button>
-        <button onclick="goToPlans()" class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition">
+        <a href="#plans-section" onclick="showTab('suite')" class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition">
           Fee Plans
-        </button>
+        </a>
       </nav>
 
       <!-- WHATSAPP FAST ACTION -->
@@ -204,7 +204,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Photo 1: NEET Medical -->
+          <!-- Photo 1 -->
           <div class="card-luxury rounded-xl overflow-hidden group">
             <div class="h-60 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80" alt="NEET Medical Aspirant Laboratory Clinical Study" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -216,7 +216,7 @@
             </div>
           </div>
 
-          <!-- Photo 2: JEE Engineering -->
+          <!-- Photo 2 -->
           <div class="card-luxury rounded-xl overflow-hidden group">
             <div class="h-60 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="JEE Engineering Technology Robotics Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -228,7 +228,7 @@
             </div>
           </div>
 
-          <!-- Photo 3: CET Speed -->
+          <!-- Photo 3 -->
           <div class="card-luxury rounded-xl overflow-hidden group">
             <div class="h-60 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=700&q=80" alt="CET Time Critical Exam Preparation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -240,7 +240,7 @@
             </div>
           </div>
 
-          <!-- Photo 4: AI Dashboard -->
+          <!-- Photo 4 -->
           <div class="card-luxury rounded-xl overflow-hidden group">
             <div class="h-60 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="NammaWeb AI Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -381,29 +381,35 @@
     </div>
   </main>
 
-  <!-- ==================== FOOTER WITH LOGO & info@nammaweb.com ==================== -->
+  <!-- ==================== FOOTER WITH EXACT LOGO & INFONAMMAWEB.COM ==================== -->
   <footer class="bg-brandDark border-t border-brandTeal py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
       
-      <!-- LOGO ABOVE NAMMAWEB IN FOOTER -->
-      <div class="brand-logo-frame w-16 h-16 mb-3 p-2.5">
-        <svg viewBox="0 0 500 500" fill="none" stroke="#005d68" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" class="logo-render-svg">
-          <path d="M 160 100 L 235 175 L 360 50 L 465 155 L 340 280 L 265 205 L 140 330 L 235 425 L 360 300" />
-          <path d="M 340 400 L 265 325 L 140 450 L 35 345 L 160 220 L 235 295 L 360 170 L 265 75 L 140 200" />
+      <!-- LOGO ABOVE NAMMAWEB (PURE VECTOR EMBEDDED) -->
+      <div class="logo-container w-16 h-16 p-2 mb-3">
+        <svg viewBox="0 0 500 500" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="26" stroke-linejoin="miter" stroke-miterlimit="10">
+          <polygon points="340,90 455,205 340,320 225,205" />
+          <polygon points="340,150 395,205 340,260 285,205" />
+          <polygon points="160,180 275,295 160,410 45,295" />
+          <polygon points="160,240 215,295 160,350 105,295" />
+          <line x1="225" y1="205" x2="340" y2="320" stroke="#ffffff" stroke-width="30" />
+          <line x1="225" y1="205" x2="340" y2="320" stroke="#005d68" stroke-width="26" />
+          <line x1="160" y1="180" x2="275" y2="295" stroke="#ffffff" stroke-width="30" />
+          <line x1="160" y1="180" x2="275" y2="295" stroke="#005d68" stroke-width="26" />
         </svg>
       </div>
       
       <span class="font-cinzel text-2xl font-bold text-white tracking-widest block">nammaweb</span>
       <span class="text-xs uppercase font-semibold tracking-widest text-slate-400">ai learning suite</span>
       
-      <!-- CONTACT EMAIL -->
-      <a href="mailto:info@nammaweb.com" class="mt-3 text-sm font-medium tracking-wider text-luxuryGold hover:text-white underline">
-        info@nammaweb.com
+      <!-- MENTION UNDER THIS LOGO AS infonammaweb.com -->
+      <a href="mailto:infonammaweb.com" class="mt-3 text-sm font-medium tracking-wider text-luxuryGold hover:text-white underline">
+        infonammaweb.com
       </a>
 
       <div class="mt-8 pt-8 border-t border-brandTeal/60 w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
         <div>© 2026 NammaWeb AI Learning Suite. All rights reserved.</div>
-        <div>Inquiries: <a href="mailto:info@nammaweb.com" class="text-slate-200 hover:underline">info@nammaweb.com</a> | WhatsApp: <a href="https://wa.me/917676546577" class="text-emerald-400 hover:underline">7676546577</a></div>
+        <div>Inquiries: <span class="text-slate-200">infonammaweb.com</span> | WhatsApp: <a href="https://wa.me/917676546577" class="text-emerald-400 hover:underline">7676546577</a></div>
       </div>
     </div>
   </footer>
@@ -461,31 +467,13 @@
       }
     }
 
-    function goToPlans() {
-      const suite = document.getElementById('view-suite');
-      const blog = document.getElementById('view-blog');
-      const btnSuite = document.getElementById('nav-tab-suite');
-      const btnBlog = document.getElementById('nav-tab-blog');
-
-      suite.classList.remove('hidden');
-      blog.classList.add('hidden');
-      btnSuite.className = "px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-brandDark bg-luxuryGold transition";
-      btnBlog.className = "px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition";
-      
-      const target = document.getElementById('plans-section');
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
     function bookPlan(plan, price) {
       const msg = `Hello NammaWeb AI Team, I would like to book the ${plan} priced at ${price}. Please send payment and activation details.`;
       window.open(`https://wa.me/917676546577?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
     function dismissPopup() {
-      const popup = document.getElementById('whatsapp-popup');
-      popup.classList.add('translate-y-40', 'opacity-0', 'pointer-events-none');
+      document.getElementById('whatsapp-popup').classList.add('translate-y-40', 'opacity-0');
     }
   </script>
 </body>
