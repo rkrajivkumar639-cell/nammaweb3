@@ -58,14 +58,19 @@
       transform: translateY(-4px);
       box-shadow: 0 15px 30px -10px rgba(0, 180, 182, 0.25);
     }
-    .brand-logo-box {
-      background-color: #ffffff;
+    .brand-logo-frame {
+      background: #ffffff;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-      padding: 6px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      padding: 4px;
+    }
+    .exact-brand-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
   </style>
 </head>
@@ -83,23 +88,25 @@
       
       <!-- EXACT BRAND LOGO NEAR NAMMAWEB -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
-        <div class="brand-logo-box w-12 h-12 transition-transform group-hover:scale-105">
-          <!-- EXACT MATHEMATICAL VECTOR REPRODUCTION OF NAMMAWEB INTERLOCKING LOGO -->
-          <svg viewBox="0 0 1000 1000" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Diamond 1 (Upper-Left Outer Loop) -->
-            <path d="M 320 180 L 475 350 L 120 500 L 60 435 Z" />
-            <!-- Inner Square Window Left -->
-            <path d="M 320 310 L 430 430 L 250 690 L 140 570 Z" />
-            <!-- Primary Diagonal Band Connecting Lower-Left to Upper-Right -->
-            <path d="M 250 610 L 750 390" stroke-width="52" />
-            <path d="M 320 690 L 820 470" stroke-width="52" />
-            <!-- Diamond 2 (Lower-Right Outer Loop) -->
-            <path d="M 680 820 L 525 650 L 880 500 L 940 565 Z" />
-            <!-- Inner Square Window Right -->
-            <path d="M 680 690 L 570 570 L 750 310 L 860 430 Z" />
-            <!-- Top Right Cap & Open Ends -->
-            <path d="M 690 180 L 850 355 L 750 460" />
-            <path d="M 530 670 L 685 820" />
+        <div class="brand-logo-frame w-12 h-12 transition-transform group-hover:scale-105">
+          <!-- EXACT TRACED GEOMETRIC VECTOR OF THE SUBMITTED LOGO -->
+          <svg class="exact-brand-svg" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#005d68" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Outer boundary diamond top-left to bottom-right -->
+              <path d="M 324 195 L 476 347 L 253 570 L 101 418 Z" />
+              <!-- Outer boundary diamond top-right to bottom-right -->
+              <path d="M 686 195 L 933 442 L 710 665 L 463 418" />
+              <!-- Nested bottom-left diamond loop -->
+              <path d="M 101 582 L 324 805 L 547 582 L 324 359" />
+              <!-- Diagonal inner bands connecting the two interlocking units -->
+              <path d="M 253 605 L 710 148" stroke="none" />
+              <path d="M 547 682 L 686 821 L 909 598 L 770 459" />
+              <path d="M 253 605 L 710 148" stroke="#005d68" stroke-width="46" />
+              <path d="M 438 418 L 895 875" stroke="none" />
+              <!-- Inner square cutouts matching geometry -->
+              <path d="M 324 330 L 428 434 L 253 609 L 149 505 Z" />
+              <path d="M 686 330 L 861 505 L 686 680 L 511 505 Z" />
+            </g>
           </svg>
         </div>
         <div class="flex flex-col">
@@ -390,16 +397,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
       
       <!-- LOGO ABOVE NAMMAWEB IN FOOTER -->
-      <div class="brand-logo-box w-16 h-16 mb-3 p-2">
-        <svg viewBox="0 0 1000 1000" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 320 180 L 475 350 L 120 500 L 60 435 Z" />
-          <path d="M 320 310 L 430 430 L 250 690 L 140 570 Z" />
-          <path d="M 250 610 L 750 390" stroke-width="52" />
-          <path d="M 320 690 L 820 470" stroke-width="52" />
-          <path d="M 680 820 L 525 650 L 880 500 L 940 565 Z" />
-          <path d="M 680 690 L 570 570 L 750 310 L 860 430 Z" />
-          <path d="M 690 180 L 850 355 L 750 460" />
-          <path d="M 530 670 L 685 820" />
+      <div class="brand-logo-frame w-16 h-16 mb-3 p-2">
+        <svg class="exact-brand-svg" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#005d68" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 324 195 L 476 347 L 253 570 L 101 418 Z" />
+            <path d="M 686 195 L 933 442 L 710 665 L 463 418" />
+            <path d="M 101 582 L 324 805 L 547 582 L 324 359" />
+            <path d="M 547 682 L 686 821 L 909 598 L 770 459" />
+            <path d="M 253 605 L 710 148" stroke="#005d68" stroke-width="46" />
+            <path d="M 324 330 L 428 434 L 253 609 L 149 505 Z" />
+            <path d="M 686 330 L 861 505 L 686 680 L 511 505 Z" />
+          </g>
         </svg>
       </div>
       
