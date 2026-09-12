@@ -65,7 +65,7 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      padding: 4px;
+      padding: 3px;
       overflow: hidden;
       flex-shrink: 0;
     }
@@ -74,6 +74,7 @@
       height: 100%;
       object-fit: contain;
       display: block;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -89,24 +90,10 @@
   <header class="sticky top-0 z-40 bg-brandDark/95 backdrop-blur-md border-b border-brandTeal/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- EXACT LOGO NEAR NAMMAWEB (DIRECT BASE64 EMBEDDED) -->
+      <!-- EXACT LOGO NEAR NAMMAWEB (DIRECT EMBEDDED ORIGINAL LOGO) -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
         <div class="brand-logo-frame w-12 h-12 transition-transform group-hover:scale-105">
-          <svg class="logo-render-img" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Exact 1:1 Scaled Geometry matching the brand mark -->
-            <path d="M318 198 L475 348" stroke="#005d68" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M318 198 L64 438 L318 692 L572 438 L318 198 Z" stroke="#005d68" stroke-width="52" stroke-linejoin="round" />
-            <path d="M682 802 L525 652" stroke="#005d68" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M682 802 L936 562 L682 308 L428 562 L682 802 Z" stroke="#005d68" stroke-width="52" stroke-linejoin="round" />
-            <!-- Intersecting Central Diagonals with Over-and-Under Occlusion -->
-            <path d="M250 622 L750 378" stroke="#ffffff" stroke-width="70" stroke-linecap="butt" />
-            <path d="M250 622 L750 378" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
-            <path d="M324 694 L754 484" stroke="#ffffff" stroke-width="70" stroke-linecap="butt" />
-            <path d="M324 694 L754 484" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
-            <!-- Open Gap Cutaways -->
-            <path d="M470 344 L682 198" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
-            <path d="M530 656 L318 802" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
-          </svg>
+          <img src="logo.png" onerror="this.onerror=null; this.src='https://i.ibb.co/vz4m8dG/nammaweb-logo.png';" alt="NammaWeb Official Logo" class="logo-render-img site-logo" />
         </div>
         <div class="flex flex-col">
           <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-white">nammaweb</span>
@@ -397,18 +384,7 @@
       
       <!-- LOGO ABOVE NAMMAWEB IN FOOTER -->
       <div class="brand-logo-frame w-16 h-16 mb-3 p-2">
-        <svg class="logo-render-img" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M318 198 L475 348" stroke="#005d68" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M318 198 L64 438 L318 692 L572 438 L318 198 Z" stroke="#005d68" stroke-width="52" stroke-linejoin="round" />
-          <path d="M682 802 L525 652" stroke="#005d68" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M682 802 L936 562 L682 308 L428 562 L682 802 Z" stroke="#005d68" stroke-width="52" stroke-linejoin="round" />
-          <path d="M250 622 L750 378" stroke="#ffffff" stroke-width="70" stroke-linecap="butt" />
-          <path d="M250 622 L750 378" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
-          <path d="M324 694 L754 484" stroke="#ffffff" stroke-width="70" stroke-linecap="butt" />
-          <path d="M324 694 L754 484" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
-          <path d="M470 344 L682 198" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
-          <path d="M530 656 L318 802" stroke="#005d68" stroke-width="52" stroke-linecap="round" />
-        </svg>
+        <img src="logo.png" onerror="this.onerror=null; this.src='https://i.ibb.co/vz4m8dG/nammaweb-logo.png';" alt="NammaWeb Official Logo" class="logo-render-img site-logo" />
       </div>
       
       <span class="font-cinzel text-2xl font-bold text-white tracking-widest block">nammaweb</span>
