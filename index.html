@@ -65,16 +65,14 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      padding: 3px;
+      padding: 6px;
       overflow: hidden;
       flex-shrink: 0;
     }
-    .logo-render-img {
+    .logo-render-svg {
       width: 100%;
       height: 100%;
-      object-fit: contain;
       display: block;
-      border-radius: 8px;
     }
   </style>
 </head>
@@ -93,7 +91,13 @@
       <!-- LOGO NEAR NAMMAWEB -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
         <div class="brand-logo-frame w-12 h-12 transition-transform group-hover:scale-105">
-          <img src="logo.png.jpeg" onerror="this.onerror=null; this.src='logo.png';" alt="NammaWeb Official Logo" class="logo-render-img site-logo" />
+          <!-- Direct SVG of the geometric infinity-knot emblem -->
+          <svg viewBox="0 0 100 100" fill="none" stroke="#005d68" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="logo-render-svg">
+            <polyline points="48,34 32,18 8,42 32,66 48,50" />
+            <polyline points="52,66 68,82 92,58 68,34 52,50" />
+            <line x1="32" y1="18" x2="68" y2="54" />
+            <line x1="32" y1="46" x2="68" y2="82" />
+          </svg>
         </div>
         <div class="flex flex-col">
           <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-white">nammaweb</span>
@@ -378,13 +382,18 @@
     </div>
   </main>
 
-  <!-- ==================== FOOTER WITH EXACT LOGO & info@nammaweb.com ==================== -->
+  <!-- ==================== FOOTER WITH LOGO & info@nammaweb.com ==================== -->
   <footer class="bg-brandDark border-t border-brandTeal py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
       
       <!-- LOGO ABOVE NAMMAWEB IN FOOTER -->
-      <div class="brand-logo-frame w-16 h-16 mb-3 p-2">
-        <img src="logo.png.jpeg" onerror="this.onerror=null; this.src='logo.png';" alt="NammaWeb Official Logo" class="logo-render-img site-logo" />
+      <div class="brand-logo-frame w-16 h-16 mb-3 p-2.5">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#005d68" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="logo-render-svg">
+          <polyline points="48,34 32,18 8,42 32,66 48,50" />
+          <polyline points="52,66 68,82 92,58 68,34 52,50" />
+          <line x1="32" y1="18" x2="68" y2="54" />
+          <line x1="32" y1="46" x2="68" y2="82" />
+        </svg>
       </div>
       
       <span class="font-cinzel text-2xl font-bold text-white tracking-widest block">nammaweb</span>
