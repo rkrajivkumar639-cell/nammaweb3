@@ -91,12 +91,11 @@
       <!-- LOGO NEAR NAMMAWEB -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
         <div class="brand-logo-frame w-12 h-12 transition-transform group-hover:scale-105">
-          <!-- Direct SVG of the geometric infinity-knot emblem -->
-          <svg viewBox="0 0 100 100" fill="none" stroke="#005d68" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="logo-render-svg">
-            <polyline points="48,34 32,18 8,42 32,66 48,50" />
-            <polyline points="52,66 68,82 92,58 68,34 52,50" />
-            <line x1="32" y1="18" x2="68" y2="54" />
-            <line x1="32" y1="46" x2="68" y2="82" />
+          <svg viewBox="0 0 500 500" fill="none" stroke="#005d68" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" class="logo-render-svg">
+            <!-- Interlocking continuous path 1 -->
+            <path d="M 160 100 L 235 175 L 360 50 L 465 155 L 340 280 L 265 205 L 140 330 L 235 425 L 360 300" />
+            <!-- Interlocking continuous path 2 -->
+            <path d="M 340 400 L 265 325 L 140 450 L 35 345 L 160 220 L 235 295 L 360 170 L 265 75 L 140 200" />
           </svg>
         </div>
         <div class="flex flex-col">
@@ -113,9 +112,9 @@
         <button id="nav-tab-blog" onclick="showTab('blog')" class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition">
           SEO Knowledge Hub
         </button>
-        <a href="#plans-section" onclick="showTab('suite')" class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition">
+        <button onclick="goToPlans()" class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition">
           Fee Plans
-        </a>
+        </button>
       </nav>
 
       <!-- WHATSAPP FAST ACTION -->
@@ -388,11 +387,9 @@
       
       <!-- LOGO ABOVE NAMMAWEB IN FOOTER -->
       <div class="brand-logo-frame w-16 h-16 mb-3 p-2.5">
-        <svg viewBox="0 0 100 100" fill="none" stroke="#005d68" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="logo-render-svg">
-          <polyline points="48,34 32,18 8,42 32,66 48,50" />
-          <polyline points="52,66 68,82 92,58 68,34 52,50" />
-          <line x1="32" y1="18" x2="68" y2="54" />
-          <line x1="32" y1="46" x2="68" y2="82" />
+        <svg viewBox="0 0 500 500" fill="none" stroke="#005d68" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" class="logo-render-svg">
+          <path d="M 160 100 L 235 175 L 360 50 L 465 155 L 340 280 L 265 205 L 140 330 L 235 425 L 360 300" />
+          <path d="M 340 400 L 265 325 L 140 450 L 35 345 L 160 220 L 235 295 L 360 170 L 265 75 L 140 200" />
         </svg>
       </div>
       
@@ -464,13 +461,31 @@
       }
     }
 
+    function goToPlans() {
+      const suite = document.getElementById('view-suite');
+      const blog = document.getElementById('view-blog');
+      const btnSuite = document.getElementById('nav-tab-suite');
+      const btnBlog = document.getElementById('nav-tab-blog');
+
+      suite.classList.remove('hidden');
+      blog.classList.add('hidden');
+      btnSuite.className = "px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-brandDark bg-luxuryGold transition";
+      btnBlog.className = "px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white transition";
+      
+      const target = document.getElementById('plans-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
     function bookPlan(plan, price) {
       const msg = `Hello NammaWeb AI Team, I would like to book the ${plan} priced at ${price}. Please send payment and activation details.`;
       window.open(`https://wa.me/917676546577?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
     function dismissPopup() {
-      document.getElementById('whatsapp-popup').classList.add('translate-y-40', 'opacity-0');
+      const popup = document.getElementById('whatsapp-popup');
+      popup.classList.add('translate-y-40', 'opacity-0', 'pointer-events-none');
     }
   </script>
 </body>
