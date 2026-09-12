@@ -66,6 +66,13 @@
       border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.35);
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      image-rendering: -webkit-optimize-contrast;
     }
   </style>
 </head>
@@ -83,26 +90,33 @@
       
       <!-- EXACT LOGO NEAR NAMMAWEB -->
       <a href="#suite-view" onclick="showTab('suite')" class="flex items-center gap-3.5 group">
-        <div class="logo-container w-12 h-12 p-1.5 transition-transform group-hover:scale-105">
-          <svg viewBox="0 0 500 500" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Interlocking Outer Diamond 1 -->
-            <polygon points="160,95 285,220 160,345 35,220" />
-            <!-- Interlocking Outer Diamond 2 -->
-            <polygon points="340,95 465,220 340,345 215,220" />
-            <!-- Lower Left Outer Diamond -->
-            <polygon points="160,250 285,375 160,500 35,375" />
-            <!-- Lower Right Outer Diamond -->
-            <polygon points="340,250 465,375 340,500 215,375" />
+        <div class="logo-container w-12 h-12 p-1 transition-transform group-hover:scale-105">
+          <svg viewBox="0 0 1000 1000" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Upper-Left Outer Diamond -->
+            <path d="M 324 186 L 474 336 L 246 564 L 96 414 Z" />
+            <!-- Upper-Left Inner Diamond -->
+            <path d="M 324 306 L 394 376 L 246 524 L 176 454 Z" />
             
-            <!-- Exact Central Diagonal Cross Overlays -->
-            <polyline points="285,95 435,245 285,395" stroke="#005d68" stroke-width="26" />
-            <polyline points="65,255 215,405 65,555" stroke="#005d68" stroke-width="26" />
+            <!-- Lower-Right Outer Diamond -->
+            <path d="M 676 436 L 904 664 L 676 892 L 448 664 Z" />
+            <!-- Lower-Right Inner Diamond -->
+            <path d="M 676 556 L 824 704 L 676 852 L 528 704 Z" />
+
+            <!-- Interlocking Center Ribbons with Masking Bridges -->
+            <!-- White underlying clearance strokes -->
+            <line x1="246" y1="564" x2="676" y2="134" stroke="#ffffff" stroke-width="66" stroke-linecap="square" />
+            <line x1="176" y1="494" x2="606" y2="64" stroke="#ffffff" stroke-width="66" stroke-linecap="square" />
+
+            <!-- Top Right Diamond Cap -->
+            <path d="M 676 134 L 904 362 L 754 512" />
+            <path d="M 606 204 L 834 432 L 754 512" />
+
+            <!-- Diagonal Connection Ribbons -->
+            <line x1="246" y1="564" x2="676" y2="134" stroke="#005d68" stroke-width="46" stroke-linecap="round" />
+            <line x1="176" y1="494" x2="606" y2="64" stroke="#005d68" stroke-width="46" stroke-linecap="round" />
             
-            <!-- Intersecting Cutout Bridges for True 3D Over-Under Weave -->
-            <line x1="215" y1="220" x2="340" y2="345" stroke="#ffffff" stroke-width="40" stroke-linecap="square" />
-            <line x1="215" y1="220" x2="340" y2="345" stroke="#005d68" stroke-width="26" stroke-linecap="round" />
-            <line x1="160" y1="250" x2="285" y2="375" stroke="#ffffff" stroke-width="40" stroke-linecap="square" />
-            <line x1="160" y1="250" x2="285" y2="375" stroke="#005d68" stroke-width="26" stroke-linecap="round" />
+            <!-- Bottom Left Terminal Segment -->
+            <path d="M 448 664 L 298 814 L 148 664" />
           </svg>
         </div>
         <div class="flex flex-col">
@@ -393,18 +407,19 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
       
       <!-- EXACT LOGO ABOVE NAMMAWEB -->
-      <div class="logo-container w-16 h-16 p-2 mb-3">
-        <svg viewBox="0 0 500 500" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="160,95 285,220 160,345 35,220" />
-          <polygon points="340,95 465,220 340,345 215,220" />
-          <polygon points="160,250 285,375 160,500 35,375" />
-          <polygon points="340,250 465,375 340,500 215,375" />
-          <polyline points="285,95 435,245 285,395" stroke="#005d68" stroke-width="26" />
-          <polyline points="65,255 215,405 65,555" stroke="#005d68" stroke-width="26" />
-          <line x1="215" y1="220" x2="340" y2="345" stroke="#ffffff" stroke-width="40" stroke-linecap="square" />
-          <line x1="215" y1="220" x2="340" y2="345" stroke="#005d68" stroke-width="26" stroke-linecap="round" />
-          <line x1="160" y1="250" x2="285" y2="375" stroke="#ffffff" stroke-width="40" stroke-linecap="square" />
-          <line x1="160" y1="250" x2="285" y2="375" stroke="#005d68" stroke-width="26" stroke-linecap="round" />
+      <div class="logo-container w-16 h-16 p-1.5 mb-3">
+        <svg viewBox="0 0 1000 1000" class="w-full h-full" fill="none" stroke="#005d68" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 324 186 L 474 336 L 246 564 L 96 414 Z" />
+          <path d="M 324 306 L 394 376 L 246 524 L 176 454 Z" />
+          <path d="M 676 436 L 904 664 L 676 892 L 448 664 Z" />
+          <path d="M 676 556 L 824 704 L 676 852 L 528 704 Z" />
+          <line x1="246" y1="564" x2="676" y2="134" stroke="#ffffff" stroke-width="66" stroke-linecap="square" />
+          <line x1="176" y1="494" x2="606" y2="64" stroke="#ffffff" stroke-width="66" stroke-linecap="square" />
+          <path d="M 676 134 L 904 362 L 754 512" />
+          <path d="M 606 204 L 834 432 L 754 512" />
+          <line x1="246" y1="564" x2="676" y2="134" stroke="#005d68" stroke-width="46" stroke-linecap="round" />
+          <line x1="176" y1="494" x2="606" y2="64" stroke="#005d68" stroke-width="46" stroke-linecap="round" />
+          <path d="M 448 664 L 298 814 L 148 664" />
         </svg>
       </div>
       
